@@ -1,0 +1,14 @@
+<svg width="52" height="51" viewBox="0 0 52 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M24.716 15.5C34.216 4.5 45.716 19.5 36.716 25.5" stroke="#FCBF5F" stroke-width="3"/>
+<rect x="30.216" width="3" height="8" rx="1" fill="#FCBF5F"/>
+<rect x="16.8668" y="6.77208" width="3" height="8" rx="1" transform="rotate(-45 16.8668 6.77208)" fill="#FCBF5F"/>
+<rect x="51.216" y="18" width="3" height="8" rx="1" transform="rotate(90 51.216 18)" fill="#FCBF5F"/>
+<rect x="44.4439" y="4.65076" width="3" height="8" rx="1" transform="rotate(45 44.4439 4.65076)" fill="#FCBF5F"/>
+<rect x="38.7871" y="28.6924" width="3" height="8" rx="1" transform="rotate(-45 38.7871 28.6924)" fill="#FCBF5F"/>
+<path d="M10.216 37.5C0.215985 38 -1.28403 23 9.21599 22C11.216 11 26.216 11 27.716 22.5C39.716 21.5 41.216 37.5 30.216 37.5" stroke="#FCBF5F" stroke-width="3"/>
+<rect x="18.9251" y="35.6939" width="3" height="5" rx="1" transform="rotate(15.2227 18.9251 35.6939)" fill="#FCBF5F"/>
+<rect x="24.5289" y="36" width="3" height="5" rx="1" transform="rotate(15.2227 24.5289 36)" fill="#FCBF5F"/>
+<rect x="20.5289" y="43" width="3" height="5" rx="1" transform="rotate(15.2227 20.5289 43)" fill="#FCBF5F"/>
+<path d="M10 31H17L10.5 43H6L10 31Z" fill="#FCBF5F"/>
+<path d="M12 40H16L8 51H6.5L12 40Z" fill="#FCBF5F"/>
+</svg>
