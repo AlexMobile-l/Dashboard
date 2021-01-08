@@ -2,6 +2,8 @@
 <html lang="ru">
    <head>
       <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- <meta http-equiv="refresh" content="5"> -->
       <title>Smart Home</title>
       <link rel="shortcut icon" href="../Dashboard/img/fv.png" type="image/png">
       <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
@@ -10,65 +12,111 @@
    <body>
       <div class="page">
          <div class="nav">
-            <a class="nav-button nav-button__home active" href="" placeholder="home"></a>
-            <a class="nav-button nav-button__sleep" href=""></a>
-            <a class="nav-button nav-button__light" href=""></a>
-            <a class="nav-button nav-button__camera" href=""></a>
-            <a class="nav-button nav-button__settings" href=""></a>
+            <a class="nav__button nav__button_home_active" href="" placeholder="home"></a>
+            <a class="nav__button nav__button_sleep" href=""></a>
+            <a class="nav__button nav__button_light" href=""></a>
+            <a class="nav__button nav__button_camera" href=""></a>
+            <a class="nav__button nav__button_settings" href=""></a>
          </div>
          <div class="main">
-            <div class="main-card main-card__header">
+            <div class="main-card header">
                <h1>Hello, bro!</h1>
-               <div class="main-card__header-block">
+               <div class="header__block">
                   <span class="time">12:05</span>
                   <span class="data">25 october 2020</span>
                </div>
             </div>
-            <div class="main-card main-card__weather">
-               <div class="main-card__weather-thermo"></div>
-               <div class="main-card__weather-title">
+            <div class="main-card weather">
+               <div class="weather__thermo"></div>
+               <div class="weather__title">
                   <p>24</p>
                   <span>&#176C</span>
                </div>
-               <div class="main-card__weather-img"></div>
+               <div class="weather__img"></div>
             </div>
-            <div class="main-card main-card__forecast">
-               <div class="main-card__forecast-item">
+            <div class="main-card forecast">
+               <div class="forecast__item">
                   <span>Mon</span>
                   <img src="img/rain.svg" width="49" height="49">
-                  <span>22&#176</span>
-                  <span class="wiather-night">17&#176</span>
+                  <div>
+                     <span>22&#176/</span>
+                     <span class="wiather__night">17&#176</span>
+                  </div>
                </div>
-               <div class="main-card__forecast-item">
-                  <span>Mon</span>
+               <div class="forecast__item">
+                  <span>Tue</span>
                   <img src="img/sun.svg" width="39" height="39">
-                  <span>26&#176</span>
-                  <span class="wiather-night">20&#176</span>
+                  <div>
+                     <span>26&#176/</span>
+                     <span class="wiather__night">20&#176</span>
+                  </div>
                </div>
-               <div class="main-card__forecast-item">
-                  <span>Mon</span>
+               <div class="forecast__item">
+                  <span>Wed</span>
                   <img src="img/sun.svg" width="39" height="39">
-                  <span>27&#176</span>
-                  <span class="wiather-night">21&#176</span>
+                  <div>
+                     <span>27&#176/</span>
+                     <span class="wiather__night">21&#176</span>
+                  </div>
                </div>
-               <div class="main-card__forecast-item">
-                  <span>Mon</span>
+               <div class="forecast__item">
+                  <span>Thur</span>
                   <img src="img/thunderbolt.svg" width="49" height="51">
-                  <span>20&#176</span>
-                  <span class="wiather-night">16&#176</span>
+                  <div>
+                     <span>20&#176/</span>
+                     <span class="wiather__night">16&#176</span>
+                  </div>
                </div>
-               <div class="main-card__forecast-item">
-                  <span>Mon</span>
+               <div class="forecast__item">
+                  <span>Fri</span>
                   <img src="img/wind.svg" width="54" height="45">
-                  <span>23&#176</span>
-                  <span class="wiather-night">20&#176</span>
+                  <div>
+                     <span>23&#176/</span>
+                     <span class="wiather__night">20&#176</span>
+                  </div>
                </div>
             </div>
-            <div class="main-card main-card__lighting">
-               
+            <div class="main-card lighting">
+               <p>Lighting</p>
+               <div class="lighting__controls">
+                  <div class="lighting__control">
+                     <input class="lighting__control-input" type="checkbox" name="Livingroom" id="Livingroom" checked>
+                     <label for="Livingroom">Livingroom</label>
+                  </div>
+                  <div class="lighting__control">
+                     <input class="lighting__control-input" type="checkbox" name="Kitchen" id="Kitchen">
+                     <label for="Kitchen">Kitchen</label>
+                  </div>
+                  <div class="lighting__control">
+                     <input class="lighting__control-input" type="checkbox" name="Garage" id="Garage">
+                     <label for="Garage">Garage</label>
+                  </div>
+               </div>
             </div>
-            <div class="main-card main-card__ventilation"></div>
-            <div class="main-card main-card__music"></div>
+            <div class="main-card ventilation">
+               <p>ventilation</p>
+               <div class="ventilation__controls">
+                  <div class="ventilation__control">
+                     <input class="ventilation__control-input" type="radio" name="radio" id="radio_off">
+                     <label for="radio_off">off</label>
+                  </div>
+                  <div class="ventilation__control">
+                     <input class="ventilation__control-input" type="radio" name="radio" id="day">
+                     <label for="day">day</label>
+                  </div>
+                  <div class="ventilation__control">
+                     <input class="ventilation__control-input" type="radio" name="radio" id="night">
+                     <label for="night">night</label>
+                  </div>
+                  <div class="ventilation__control">
+                     <input class="ventilation__control-input" type="radio" name="radio" id="auto" checked>
+                     <label for="auto">auto</label>
+                  </div>
+               </div>
+            </div>
+            <div class="main-card music">
+               <p>music</p>
+            </div>
             <div class="main-card main-card__resources"></div>
             <div class="main-card main-card__calendar"></div>
             <div class="main-card main-card__camera"></div>

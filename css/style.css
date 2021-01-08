@@ -1,9 +1,10 @@
 :root {
 	--white: #fff;
 	--text-dark: #303030;
-	--text-light: #7b7b7b;
+	--text-light: #a4a4a4;
 	--background-page: #f0f2f5;
 	--background-card: #fff;
+	--button-green: #3EEBA0;
 }
 
 body {
@@ -31,7 +32,7 @@ body {
 	align-items: center;
 }
 
-.nav-button {
+.nav__button {
 	width: 100%;
 	height: 50px;
 	background-position: center;
@@ -39,43 +40,43 @@ body {
 	margin-top: 50px;
 }
 
-.nav-button__home {
+.nav__button_home {
 	background-image: url('../img/home.svg');
 }
 
-.nav-button__home, .active {
+.nav__button_home_active {
 	background-image: url('../img/home_active.svg');
 }
 
-.nav-button__sleep {
+.nav__button_sleep {
 	background-image: url('../img/sleep.svg');
 }
 
-.nav-button__sleep .active {
+.nav__button_sleep_active {
 	background-image: url('../img/sleep_active.svg');
 }
 
-.nav-button__light {
+.nav__button_light {
 	background-image: url('../img/lighting.svg');
 }
 
-.nav-button__light .active {
+.nav__button_light_active {
 	background-image: url('../img/lighting_active.svg');
 }
 
-.nav-button__camera {
+.nav__button_camera {
 	background-image: url('../img/camera.svg');
 }
 
-.nav-button__camera .active {
+.nav__button_camera_active {
 	background-image: url('../img/camera_active.svg');
 }
 
-.nav-button__settings {
+.nav__button_settings {
 	background-image: url('../img/settings.svg');
 }
 
-.nav-button__settings .active {
+.nav__button_settings_active {
 	background-image: url('../img/settings_active.svg');
 }
 
@@ -97,22 +98,29 @@ body {
 	border-radius: 20px;
 }
 
-.main-card__header {
+.main-card p {
+	color: var(--text-light);
+	font-size: 24px;
+	text-transform: uppercase;
+	margin: 20px 0 10px 40px;
+}
+
+.header {
 	grid-area: post-1;
-	height: 130px;
+	height: 120px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	padding: 0 40px 0 40px;
 }
 
-.main-card__header h1 {
+.header h1 {
 	color: var(--text-dark);
 	font-size: 32px;
 	font-weight: 400;
 }
 
-.main-card__header-block {
+.header__block {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
@@ -126,9 +134,10 @@ body {
 
 .data {
 	color: var(--text-light);
+	font-weight: 600;
 }
 
-.main-card__weather {
+.weather {
 	grid-area: post-2;
 	position: relative;
 	display: flex;
@@ -137,7 +146,7 @@ body {
 	align-items: center;
 }
 
-.main-card__weather-thermo {
+.weather__thermo {
 	position: absolute;
 	top: 20px;
 	left: 20px;
@@ -148,25 +157,25 @@ body {
 	background-repeat: no-repeat;
 }
 
-.main-card__weather-title {
+.weather__title {
 	display: flex;
 }
 
-.main-card__weather-title p {
+.weather__title p {
 	color: var(--text-dark);
 	font-size: 72px;
 	font-weight: 400;
 	margin: 0;
 }
 
-.main-card__weather-title span {
+.weather__title span {
 	color: var(--text-dark);
 	font-size: 24px;
 	font-weight: 400;
 	margin: 0 10px 0 0;
 }
 
-.main-card__weather-img {
+.weather__img {
 	width: 100px;
 	height: 100px;
 	background-image: url('../img/sun_active.svg');
@@ -174,7 +183,7 @@ body {
 	background-repeat: no-repeat;
 }
 
-.main-card__forecast {
+.forecast {
 	grid-area: post-3;
 	display: flex;
 	flex-direction: row;
@@ -183,7 +192,7 @@ body {
 	align-items: center;
 }
 
-.main-card__forecast-item {
+.forecast__item {
 	height: 133px;
 	width: auto;
 	display: flex;
@@ -192,29 +201,96 @@ body {
 	justify-content: space-between;
 }
 
-.main-card__forecast-item img {
+.forecast__item img {
 	flex-grow: 2;
 }
 
-.main-card__forecast-item span {
+.forecast__item span {
 	color: var(--text-dark);
 	font-size: 20px;
 }
 
-.main-card__forecast-item .wiather-night {
+.forecast__item .wiather__night {
 	color: var(--text-light);
 	font-size: 16px;
 }
 
-.main-card__lighting {
+.lighting {
 	grid-area: post-4;
 }
 
-.main-card__ventilation {
+.lighting__control {
+	width: 100%;
+	height: auto;
+	position: relative;
+	margin: 7px 0 7px 0;
+}
+
+.lighting__control-input {
+	z-index: -1;
+	opacity: 0;
+}
+
+.lighting__controls label {
+	color: var(--text-dark);
+	font-size: 20px;
+	line-height: 32px;
+	margin-left: 15px;
+}
+
+.lighting__control-input + label:before {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	right: 40px;
+	top: 0;
+	width: 60px;
+	height: 40px;
+	background-image: url('../img/control_off.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+}
+
+.lighting__control-input:checked + label:before {
+	background-image: url('../img/control_on.svg');
+}
+
+.ventilation {
 	grid-area: post-5;
 }
 
-.main-card__music {
+.ventilation__controls {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 40px;
+}
+
+.ventilation__control-input {
+	/*visibility: hidden;*/
+	/*display: none;*/
+	margin: 0;
+}
+
+.ventilation__control label {
+	padding: 20px 20px;
+	margin: 5px;
+	background-color: var(--background-page);
+	cursor: pointer;
+	border-radius: 10px;
+	color: var(--text-dark);
+	font-size: 20px;
+}
+
+.ventilation__control:checked label {
+	background-color: var(--button-green);
+}
+
+.music {
 	grid-area: post-6;
 }
 
